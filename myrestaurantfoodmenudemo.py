@@ -57,7 +57,7 @@ elif option == 'Find a food':
 
         foodName = st.text_input("Please enter the food name that you want to search for")
         
-        st.write("The food is in the Food Menu: {}".format(st.session_state.RBAFoodMenu.findNode(foodName)))
+        st.write("The food is in the Food Menu: {}".format(st.session_state.MyFoodMenu.findNode(foodName)))
  
 
     else:
