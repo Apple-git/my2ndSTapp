@@ -38,11 +38,11 @@ if option == 'Add a food':
 
             if st.session_state.hasFood==1:
 
-                st.session_state.RBAFoodMenu.addNode(foodName,foodPrice)
+                st.session_state.MyFoodMenu.addNode(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
             
             else:
-                st.session_state.RBAFoodMenu = foodMenu(foodName,foodPrice)
+                st.session_state.MyFoodMenu = foodMenu(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
                 st.session_state.hasFood = 1
 
@@ -69,7 +69,7 @@ elif option == 'Get the sorted food list':
 
     if st.session_state.hasFood ==1:
         st.write("The list in the Food Menu:")
-        st.write(pd.DataFrame(st.session_state.RBAFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
+        st.write(pd.DataFrame(st.session_state.MyFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
 
     else:
         st.write("Empty Food Menu.")
