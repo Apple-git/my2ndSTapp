@@ -78,4 +78,4 @@ else:
     st.write("The food menu system has been reset.")
 
     st.session_state.hasFood = 0 
-    st.session_state.RBAFoodMenu = []
+    st.session_state.MyFoodMenu = []
